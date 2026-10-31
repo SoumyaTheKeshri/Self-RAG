@@ -1,0 +1,14 @@
+[
+  {
+    "question": "What are the two main stages of a RAG pipeline?",
+    "expected_answer_contains": "retrieval and generation"
+  },
+  {
+    "question": "What is one limitation of standard RAG mentioned in the documents?",
+    "expected_answer_contains": "fixed number of passages"
+  },
+  {
+    "question": "What are the three main categories of reflection tokens in Self-RAG?",
+    "expected_answer_contains": "relevance, support, and utility"
+  }
+]

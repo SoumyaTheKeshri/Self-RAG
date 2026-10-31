@@ -1,0 +1,21 @@
+Self-RAG is a framework that trains a language model to adaptively
+decide when retrieval is needed, to critique the relevance of
+retrieved passages, and to check whether its own generated claims are
+actually supported by those passages. It does this using special
+reflection tokens that are learned during training rather than
+inserted by hand at inference time.
+
+The three main categories of reflection tokens in Self-RAG are:
+retrieval tokens, which decide whether to retrieve at all; relevance
+tokens (ISREL), which judge whether a retrieved passage is useful for
+answering the query; support tokens (ISSUP), which check whether a
+generated statement is backed up by the retrieved passage; and utility
+tokens (ISUSE), which rate the overall usefulness of a response.
+
+Self-RAG differs from standard RAG in that it can retrieve multiple
+times during generation, skip retrieval entirely when it is not
+needed, and select among multiple candidate generations based on their
+critique scores rather than always accepting the first output.
+
+REPLACE THIS FILE with your own source documents relevant to your
+chosen topic.

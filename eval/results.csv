@@ -1,0 +1,11 @@
+question,baseline_answer,baseline_correct,baseline_hallucination_rate,self_rag_answer,self_rag_correct,self_rag_hallucination_rate
+What are the two main stages of a RAG pipeline?,The two main stages of a RAG pipeline are **retrieval** and **generation**.,False,0.0,The two main stages are **retrieval** and **generation**.,False,0.0
+What is one limitation of standard RAG mentioned in the documents?,"One limitation of standard RAG is that it always retrieves a fixed number of passages for every query, even when retrieval isn’t needed or the retrieved passages may not be relevant.",True,0.0,"One limitation of standard RAG is that it always retrieves a fixed number of passages for every query, even when retrieval isn’t needed or the retrieved passages may not be relevant.",True,0.0
+What are the three main categories of reflection tokens in Self-RAG?,"The three main categories of reflection tokens in Self‑RAG are:
+
+1. **Retrieval tokens** – decide whether to retrieve at all.  
+2. **Relevance tokens (ISREL)** – judge whether a retrieved passage is useful for answering the query.  
+3. **Support tokens (ISSUP)** – check whether a generated statement is backed up by the retrieved passage.",False,0.33,"The three main categories of reflection tokens in Self‑RAG are:
+
+1. **Retrieval tokens** – decide whether to retrieve at all.  
+2. **Relevance tokens (ISREL)** – judge whether a retrieved passage is useful for",False,0.25

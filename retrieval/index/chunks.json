@@ -1,0 +1,26 @@
+[
+  {
+    "text": "Retrieval-Augmented Generation (RAG) is a technique that combines a\nlanguage model with an external retrieval system. Instead of relying\nsolely on knowledge stored in the model's parameters, RAG retrieves\nrelevant passages from a document collection and includes them in the\nprompt before generating an answer. This helps reduce hallucination\nbecause the model can ground its response in retrieved evidence rather\nthan inventing facts from memory.\n\nA typical RAG pipeline has two main stages: retriev",
+    "source": "sample_doc_1.txt"
+  },
+  {
+    "text": "typical RAG pipeline has two main stages: retrieval, where a query\nis embedded and compared against a vector index of document chunks to\nfind the most similar passages, and generation, where the language\nmodel produces an answer conditioned on both the query and the\nretrieved passages.\n\nOne limitation of standard RAG is that it retrieves a fixed number of\npassages for every query regardless of whether retrieval is actually\nnecessary, and regardless of whether the retrieved passages are\nrelevant",
+    "source": "sample_doc_1.txt"
+  },
+  {
+    "text": "ess of whether the retrieved passages are\nrelevant. This can introduce noise into the generation process and\nsometimes leads to less accurate or less useful answers.\n\nREPLACE THIS FILE with your own source documents relevant to your\nchosen topic. Add as many .txt files as you like into this folder —\neach one will be automatically chunked and indexed.",
+    "source": "sample_doc_1.txt"
+  },
+  {
+    "text": "Self-RAG is a framework that trains a language model to adaptively\ndecide when retrieval is needed, to critique the relevance of\nretrieved passages, and to check whether its own generated claims are\nactually supported by those passages. It does this using special\nreflection tokens that are learned during training rather than\ninserted by hand at inference time.\n\nThe three main categories of reflection tokens in Self-RAG are:\nretrieval tokens, which decide whether to retrieve at all; relevance\ntok",
+    "source": "sample_doc_2.txt"
+  },
+  {
+    "text": "h decide whether to retrieve at all; relevance\ntokens (ISREL), which judge whether a retrieved passage is useful for\nanswering the query; support tokens (ISSUP), which check whether a\ngenerated statement is backed up by the retrieved passage; and utility\ntokens (ISUSE), which rate the overall usefulness of a response.\n\nSelf-RAG differs from standard RAG in that it can retrieve multiple\ntimes during generation, skip retrieval entirely when it is not\nneeded, and select among multiple candidate gen",
+    "source": "sample_doc_2.txt"
+  },
+  {
+    "text": "ot\nneeded, and select among multiple candidate generations based on their\ncritique scores rather than always accepting the first output.\n\nREPLACE THIS FILE with your own source documents relevant to your\nchosen topic.",
+    "source": "sample_doc_2.txt"
+  }
+]

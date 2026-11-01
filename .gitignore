@@ -1,34 +1,88 @@
-
-# Python cache
+# Python bytecode & cache
 __pycache__/
 *.py[cod]
+*$py.class
 
-# Virtual environment
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
 venv/
 .venv/
 env/
+ENV/
+env.bak/
+venv.bak/
 
-# Environment variables and API keys
+# Environment variables and secrets
 .env
 .env.*
+*.env
 !.env.example
+!.env.template
 
-# VS Code
+# IDEs and text editors
 .vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+*.sublime-workspace
+*.sublime-project
 
 # Jupyter Notebook
 .ipynb_checkpoints/
+*/.ipynb_checkpoints/*
 
-# Logs
+# Testing & type checking
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Logs and databases
 *.log
+*.sqlite
+*.sqlite3
 
-# OS files
-.DS_Store
-Thumbs.db
-
-# Model files
+# Model checkpoints & cache
 *.pt
 *.pth
+*.bin
+*.onnx
 *.h5
 *.keras
-*.onnx
+*.safetensors
+.cache/
+huggingface/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
